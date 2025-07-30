@@ -1,0 +1,61 @@
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+h1, h2 {
+  text-align: center;
+  color: #333;
+}
+
+.catalog {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.price {
+  font-weight: bold;
+  color: #007b00;
+}
+
+button {
+  padding: 8px 12px;
+  margin-top: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.cart {
+  margin-top: 20px;
+}
+
+.cart-item {
+  padding: 5px 0;
+}
+
+.checkout-btn {
+  margin-top: 10px;
+  background-color: #28a745;
+}
+
+.checkout-btn:hover {
+  background-color: #218838;
+}
