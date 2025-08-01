@@ -34,6 +34,9 @@ data:
       created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
     );
     
+    ALTER TABLE cart_items
+    ADD CONSTRAINT unique_user_part UNIQUE (user_id, part_id);
+
     INSERT INTO users (name, email) VALUES ('Test User', 'test@example.com');
 
     INSERT INTO parts (name, description, price, stock) VALUES
