@@ -20,7 +20,7 @@ function App() {
   };
 
   const checkout = () => {
-    axios.post('api/cart/checkout', { userId: 1 }).then(res => {
+    axios.post('/api/cart/checkout', { userId: 1 }).then(res => {
       alert(`✅ Checkout complete. Total: ₹${res.data.total}`);
       setCart([]);
     });
