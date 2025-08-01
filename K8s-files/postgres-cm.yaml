@@ -33,6 +33,8 @@ data:
       total DECIMAL,
       created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
     );
+    
+    INSERT INTO users (name, email) VALUES ('Test User', 'test@example.com');
 
     INSERT INTO parts (name, description, price, stock) VALUES
     ('Resistor 220Ω', 'Standard 220 ohm resistor for circuits', 0.10, 500),
