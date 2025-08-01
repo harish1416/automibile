@@ -1,0 +1,47 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: init-db-script
+  labels:
+    app: postgres
+data:
+  init.sql: |
+    CREATE TABLE users (
+      id SERIAL PRIMARY KEY,
+      name VARCHAR(100),
+      email VARCHAR(100) UNIQUE
+    );
+
+    CREATE TABLE parts (
+      id SERIAL PRIMARY KEY,
+      name VARCHAR(100),
+      description TEXT,
+      price DECIMAL,
+      stock INT
+    );
+
+    CREATE TABLE cart_items (
+      id SERIAL PRIMARY KEY,
+      user_id INT REFERENCES users(id),
+      part_id INT REFERENCES parts(id),
+      quantity INT
+    );
+
+    CREATE TABLE orders (
+      id SERIAL PRIMARY KEY,
+      user_id INT REFERENCES users(id),
+      total DECIMAL,
+      created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    );
+
+    INSERT INTO parts (name, description, price, stock) VALUES
+    ('Resistor 220Ω', 'Standard 220 ohm resistor for circuits', 0.10, 500),
+    ('Capacitor 100μF', 'Electrolytic capacitor for power filtering', 0.25, 300),
+    ('LED Red', '5mm red LED for indicators', 0.15, 1000),
+    ('Microcontroller ATmega328', 'Popular MCU used in Arduino boards', 2.50, 150),
+    ('Breadboard', '400-point solderless breadboard', 1.20, 200),
+    ('Jumper Wires', 'Pack of 40 male-to-male jumper wires', 1.00, 250),
+    ('Servo Motor SG90', 'Mini servo motor for robotics', 3.00, 75),
+    ('Temperature Sensor LM35', 'Analog temperature sensor', 0.80, 120),
+    ('Push Button', 'Momentary tactile switch', 0.05, 1000),
+    ('LCD Display 16x2', 'Alphanumeric display with I2C interface', 4.00, 60);
