@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: node-backend
-        image: 179657021511.dkr.ecr.ap-southeast-2.amazonaws.com/backend:v2
+        image: 179657021511.dkr.ecr.ap-southeast-2.amazonaws.com/backend:v3
         ports:
         - containerPort: 3001
       imagePullSecrets:
