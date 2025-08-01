@@ -37,13 +37,13 @@ data:
     INSERT INTO users (name, email) VALUES ('Test User', 'test@example.com');
 
     INSERT INTO parts (name, description, price, stock) VALUES
-    ('Resistor 220Ω', 'Standard 220 ohm resistor for circuits', 0.10, 500),
-    ('Capacitor 100μF', 'Electrolytic capacitor for power filtering', 0.25, 300),
+    ('Resistor 220Ω', 'Standard 220 ohm resistor for circuits', 500, 500),
+    ('Capacitor 100μF', 'Electrolytic capacitor for power filtering', 250, 300),
     ('LED Red', '5mm red LED for indicators', 0.15, 1000),
-    ('Microcontroller ATmega328', 'Popular MCU used in Arduino boards', 2.50, 150),
-    ('Breadboard', '400-point solderless breadboard', 1.20, 200),
-    ('Jumper Wires', 'Pack of 40 male-to-male jumper wires', 1.00, 250),
-    ('Servo Motor SG90', 'Mini servo motor for robotics', 3.00, 75),
-    ('Temperature Sensor LM35', 'Analog temperature sensor', 0.80, 120),
-    ('Push Button', 'Momentary tactile switch', 0.05, 1000),
-    ('LCD Display 16x2', 'Alphanumeric display with I2C interface', 4.00, 60);
+    ('Microcontroller ATmega328', 'Popular MCU used in Arduino boards', 350, 150),
+    ('Breadboard', '400-point solderless breadboard', 120, 200),
+    ('Jumper Wires', 'Pack of 40 male-to-male jumper wires', 100, 250),
+    ('Servo Motor SG90', 'Mini servo motor for robotics', 300, 75),
+    ('Temperature Sensor LM35', 'Analog temperature sensor', 800, 120),
+    ('Push Button', 'Momentary tactile switch', 750, 1000),
+    ('LCD Display 16x2', 'Alphanumeric display with I2C interface', 450, 60);
