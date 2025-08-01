@@ -12,7 +12,7 @@ function App() {
 
   const addToCart = (part) => {
     setCart(prevCart => [...prevCart, { ...part, quantity: 1 }]);
-    axios.post('/cart/add', {
+    axios.post('/api/cart/add', {
       userId: 1,
       partId: part.id,
       quantity: 1
@@ -20,7 +20,7 @@ function App() {
   };
 
   const checkout = () => {
-    axios.post('/cart/checkout', { userId: 1 }).then(res => {
+    axios.post('api/cart/checkout', { userId: 1 }).then(res => {
       alert(`✅ Checkout complete. Total: ₹${res.data.total}`);
       setCart([]);
     });

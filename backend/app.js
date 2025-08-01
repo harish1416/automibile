@@ -26,7 +26,7 @@ app.get('/api/parts', async (req, res) => {
   }
 });
 
-app.post('/cart/add', async (req, res) => {
+app.post('/api/cart/add', async (req, res) => {
   const { userId, partId, quantity } = req.body;
 
   if (!userId || !partId || !quantity) {
@@ -50,7 +50,7 @@ app.post('/cart/add', async (req, res) => {
 
 
 // Checkout with actual total
-app.post('/cart/checkout', async (req, res) => {
+app.post('/api/cart/checkout', async (req, res) => {
   const { userId } = req.body;
   try {
     const result = await pool.query(
