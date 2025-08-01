@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: react-frontend
-        image: 179657021511.dkr.ecr.ap-southeast-2.amazonaws.com/frontend:v2
+        image: 179657021511.dkr.ecr.ap-southeast-2.amazonaws.com/frontend:v3
         ports:
         - containerPort: 80
       imagePullSecrets: 
